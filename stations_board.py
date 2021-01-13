@@ -10,16 +10,6 @@ os.system("")
 #Display refresh rate in seconds
 refresh = 10
 
-#Define our line colors
-COLOR = {
-        "HEADER": "\033[1m",
-        "BLUE": "\033[94m",
-        "GREEN": "\033[92m",
-        "RED": "\033[91m",
-        "GOLD": "\033[93m",
-        "RESET": "\033[0m",
-        }
-
 #Input of station name
 station = input("Enter Station: ")
 
