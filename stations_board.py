@@ -1,25 +1,25 @@
 import os
 import curses
-import station_codes
+import sys
+from station_codes import station_code
 from curses import wrapper
 from time import sleep
 from marta.api import get_trains
 
-os.system("")
-
 #Display refresh rate in seconds
 refresh = 10
 
-#Input of station name
-station = input("Enter Station: ")
-
-#We add "Station" to the end here so the user doesn't have to type it out
-station = str(station + " Station")
+if len(sys.argv) < 2:
+    station = str("Five Points Station")
+    code = str("")
+else:
+    station = station_code(sys.argv[1])
+    code = str("(" + sys.argv[1] + ")")
 
 #Define our header rows here
 header = ['LINE', 'DESTINATION', 'ARRIVAL']
 header_row = str("{: <8} {: <25} {: <15}".format(*header))
-station_row = str("MARTA - " + station)
+station_row = str("MARTA - " + station + " " + code.upper())
 
 def main(screen):
     

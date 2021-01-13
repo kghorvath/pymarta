@@ -1,37 +1,77 @@
-n1 = str("Peachtree Center")
-n2 = str("Civic Center")
-n3 = str("North Ave")
-n4 = str("Midtown")
-n5 = str("Arts Center")
-n6 = str("Lindbergh Center")
-n7 = str("Buckhead")
-n8 = str("Medical Center")
-n9 = str("Dunwoody")
-n10 = str("Sandy Springs")
-n11 = str("North Springs")
-ne7 = str("Lenox")
-ne8 = str("Brookhaven Oglethorpe")
-ne9 = str("Chamblee")
-ne10 = str("Doraville")
-s1 = str("Garnett")
-s2 = str("West End")
-s3 = str("Oakland City")
-s4 = str("Lakewood Ft McPherson")
-s5 = str("East Point")
-s6 = str("College Park")
-s7 = str("Airport")
-e1 = str("Georgia State")
-e2 = str("King Memorial")
-e3 = str("Inman Park Reynoldstown")
-e4 = str("Edgewood Candler Park")
-e5 = str("East Lake")
-e6 = str("Decatur")
-e7 = str("Avondale")
-e8 = str("Kensington")
-e9 = str("Indian Creek")
-w1 = str("Omni Dome")
-w2 = str("Vine City")
-w3 = str("Ashby")
-w4 = str("West Lake")
-w5 = str("Hamilton E Holmes")
-p4 = str("Bankhead")
+def station_code(code):
+    if code == "n1":
+        return str("Peachtree Center Station")
+    elif code == "n2":
+        return str("Civic Center Station")
+    elif code == "n3":
+        return str("North Ave Station")
+    elif code == "n4":
+        return str("Midtown Station")
+    elif code == "n5":
+        return str("Arts Center Station")
+    elif code == "n6":
+        return str("Lindbergh Station")
+    elif code == "n7":
+        return str("Buckhead Station")
+    elif code == "n8":
+        return str("Medical Center Station")
+    elif code == "n9":
+        return str("Dunwoody Station")
+    elif code == "n10":
+        return str("Sandy Springs Station")
+    elif code == "n11":
+        return str("North Springs Station")
+    elif code == "ne7":
+        return str("Lenox Station")
+    elif code == "ne8":
+        return str("Brookhaven Station")
+    elif code == "ne9":
+        return str("Chamblee Station")
+    elif code == "ne10":
+        return str("Doraville Station")
+    elif code == "s1":
+        return str("Garnett Station")
+    elif code == "s2":
+        return str("West End Station")
+    elif code == "s3":
+        return str("Oakland City Station")
+    elif code == "s4":
+        return str("Lakewood Station")
+    elif code == "s5":
+        return str("East Point Station")
+    elif code == "s6":
+        return str("College Park Station")
+    elif code == "s7":
+        return str("Airport Station")
+    elif code == "e1":
+        return str("Georgia State Station")
+    elif code == "e2":
+        return str("King Memorial Station")
+    elif code == "e3":
+        return str("Inman Park Station")
+    elif code == "e4":
+        return str("Edgewood Candler Park Station")
+    elif code == "e5":
+        return str("East Lake Station")
+    elif code == "e6":
+        return str("Decatur Station")
+    elif code == "e7":
+        return str("Avondale Station")
+    elif code == "e8":
+        return str("Kensington Station")
+    elif code == "e9":
+        return str("Indian Creek Station")
+    elif code == "w1":
+        return str("Omni Dome Station")
+    elif code == "w2":
+        return str("Vine City Station")
+    elif code == "w3":
+        return str("Ashby Station")
+    elif code == "w4":
+        return str("West Lake Station")
+    elif code == "w5":
+        return str("Hamilton E Holmes Station")
+    elif code == "p4":
+        return str("Bankhead Station")
+    else:
+        raise Exception("Invalid station code!")
