@@ -32,7 +32,14 @@ def main(screen):
     while True:
         screen.clear()
         for j in range(0,refresh):
-            screen.addstr(0,0,station_header, curses.A_UNDERLINE)
+            
+            #Our pretty MARTA banner :)
+            screen.addstr(0,0,"/", curses.color_pair(1) | curses.A_UNDERLINE)
+            screen.addstr(0,1,"/", curses.color_pair(2) | curses.A_UNDERLINE)
+            screen.addstr(0,2,"/", curses.color_pair(3) | curses.A_UNDERLINE)
+            screen.addstr(0,4,"MARTA", curses.A_BOLD | curses.A_UNDERLINE)
+
+            screen.addstr(0,10,station_header, curses.A_UNDERLINE)
             screen.addstr(1,0,"LINE", curses.A_BOLD)
             screen.addstr(1,7,"DESTINATION", curses.A_BOLD)
             screen.addstr(1,33,"ARRIVING", curses.A_BOLD)
@@ -61,10 +68,6 @@ def main(screen):
                 else:
                     line = "●"
                 
-                trains[i].waiting_seconds = int(trains[i].waiting_seconds)
-                if trains[i].waiting_seconds < 60:
-                    trains[i].waiting_time = "<1 min"
-
                 screen.addstr(i+2,0,line,curses.color_pair(c))
                 screen.addstr(i+2,7,trains[i].destination)
                 screen.addstr(i+2,33,trains[i].waiting_time)
