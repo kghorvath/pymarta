@@ -21,7 +21,7 @@ header = ['LINE', 'DESTINATION', 'ARRIVAL']
 header_row = str("{: <8} {: <25} {: <15}".format(*header))
 station_row = str("MARTA - " + station + " " + code.upper())
 
-def main(screen):
+def main(station_code):
     
     #Initialize colors
     curses.start_color()

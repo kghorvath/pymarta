@@ -73,5 +73,7 @@ def station_code(code):
         return str("Hamilton E Holmes Station")
     elif code == "p4":
         return str("Bankhead Station")
+    elif code == "f":
+        return str("Five Points Station")
     else:
         raise Exception("Invalid station code!")
